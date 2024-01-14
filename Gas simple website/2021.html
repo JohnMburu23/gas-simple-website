@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <title>Mini Project</title>
+</head>
+<body style="background-color:white;">
+    <header id="top">
+        <nav class="navbar" id="home">
+            <div class="heading">
+                <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">FreeRidge Gas Dealers</h1>
+            </div>
+            <div class="links">
+                <ul style="font-family: 'Times New Roman', Times, serif;">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+    <p class="intro" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+       <b>Running out of gas?</b> Worry no more.We got you.<br>
+        FreeRidge gas dealers is your ideal solution. <br>
+    </p><br>
+        <div class="slides">
+            <div class="slide">
+                <a href="product1.html"><img src="6kgs.jpg" alt="image 1"></a>
+            </div>
+            <div class="slide">
+                <a href="product2.html"><img src="13kg.jfif" alt="image 2"></a>
+            </div>
+            <div class="slide">
+                <a href="product4.html"><img src="burner.png" alt="image 3"></a>
+            </div>
+            <div class="slide">
+                <a href="product3.html"><img src="grill.jpg" alt="image 4"></a>
+            </div>
+            <button class="prev" onclick="prevslide()">Prev</button>
+            <button class="next" onclick="nextslide()">Next</button>
+        </div>
+        <div class="texts">
+        <p class="Advert" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">FreeRidge Gas dealers offers <br>
+            you the best gas products countrywide at an affordable price. <br>
+            We offer deliverly services for free and your product is delivered right to your doorstep <br>
+            within the shortest time possible. <br>
+        </p>
+        <p class="safety">
+            The safety of our customers is paramount and <br>
+            has been accorded the top most priority <br>
+            in our daily operations. <br>
+            Consumers are encouraged to observe safety measures when handling gas cylinders. <br>
+        </p>
+        <p class="get">
+            Get your gas cylinder today and all cooking accessories <br>
+            from FreeRidge gas dealers. <br>
+        </p>
+        </div>
+    </div>
+    <hr color="black">
+    <footer>
+    <div id="about">
+        <h1>ABOUT US</h1>
+       <h3><u> CEO details</u></h3> <br>
+        Name:John Muturi Mburu <br>
+        Gender:Male <br>
+        Contact: <a href="tel:0114439116">0114439116</a> <br>
+        <p>We are located countrywide.Contact us and get linked to your <br>
+        nearest branch gas dealers.</p>
+       <h3><u>Vision</u></h3>
+       <p>
+        To be the best gas dealers and service provider <br>
+        countrywide,to be the most customer centric company and <br>
+        to build a place where people can find any cooking accessories they might require to buy. <br> 
+       </p>
+    </div>
+    <hr color="black">
+    <div id="contact">
+        <h1>CONTACT US</h1>
+        <p>
+            <u>Contact <br></u> 
+             For any business inquiry,<a href="tel:0721276010">Call us now.</a><br>
+             or <br>
+           <u>Email <br></u> 
+            <a href="mail to:freeridgegas2023@gmail.com">freeridgegas2023@gmail.com</a><br>
+        </p>
+    </div>
+    <div>
+       <a href="#top"><button class="backtotop">Back To Top</button></a>
+    </div>
+</footer>
+    <script>
+       var currentslide=0;
+        var slides=document.getElementsByClassName("slide");
+        function showslide(n)
+        {
+            if(n<0)
+            {
+                currentslide=slides.length-1;
+            }
+            else if(n>=slides.length)
+            {
+                currentslide=0;
+            }
+            else
+            {
+                currentslide=n;
+            }
+            for(var i=0;i<slides.length;i++)
+            {
+                slides[i].style.display="none";
+            }
+            slides[currentslide].style.display="block";
+        }
+        function prevslide()
+        {
+            showslide(currentslide-1);
+        }
+        function nextslide()
+        {
+            showslide(currentslide+1);
+        }
+        showslide(currentslide);
+    </script>
+    </body>
+</html>
